@@ -3,16 +3,23 @@
 using namespace std;
 int main()
 {
-	char alpha;
+	char alpha;   //declaring variable with datatype char
 	cout << "Enter the Alphabet: " << endl;
 	cin >> alpha;
-	if (alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u')
+	if (alpha >= 'A' && alpha <= 'Z' || alpha >= 'a' && alpha <= 'z') //using nested if else statement
 	{
-		cout << "You entered a vowel " << endl;
+		if (alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u')
+		{
+			cout << "You entered a vowel " << endl;
+		}
+		else
+		{
+			cout << "You entered a consonant " << endl;
+		}
 	}
-	else 
+	else
 	{
-		cout << "You entered a consonant " << endl;
+		cout << "Incorrect command! " << endl;  //displays this message if a number or special character is entered
 	}
 	
 	return 0;
